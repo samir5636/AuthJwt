@@ -1,0 +1,83 @@
+﻿# Rider IDE specific
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/shelf/
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/gradle.xml
+.idea/**/libraries/
+.idea/httpRequests/
+.idea/kotlinc.xml
+.idea/modules.xml
+
+# ASP.NET / .NET Specific
+bin/
+obj/
+out/
+*.vspscc
+*.vssscc
+*.suo
+*.user
+*.sln.docstates
+*.sln*
+*.cache
+*.pdb
+*.csproj.user
+*.log
+*.tlog
+*.wrn
+*.err
+
+# Build Artifacts
+project.lock.json
+project.assets.json
+project.nuget.cache
+*.nuget.props
+*.nuget.targets
+*.nupkg
+*.snupkg
+*.tmp
+*.bak
+*.db
+*.sqlite
+
+# Entity Framework Migrations
+migrations/
+
+# NuGet Packages
+packages/
+!packages/repositories.config
+
+# User-specific Configuration
+appsettings.Development.json
+secrets.json
+appsettings.Local.json
+*.env
+
+# JetBrains Rider Plugin Cache
+.idea/sonarlint/
+.idea/sonarlint/**
+
+# Windows System Files
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+*.lnk
+
+# Docker
+docker-compose.override.yml
+docker-compose.debug.yml
+
+# Logs
+logs/
+*.log
