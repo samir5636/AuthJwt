@@ -1,4 +1,6 @@
-﻿namespace backend.Dtos.Stock;
+﻿using backend.Dtos.Comment;
+
+namespace backend.Dtos.Stock;
 
 public class StockDto
 {
@@ -13,5 +15,7 @@ public class StockDto
     public decimal LastDiv { get; set; }
 
     public long MarketCap { get; set; }
+    
+    public List<CommentDto> Comments { get; set; } = new List<CommentDto>();
     
 }

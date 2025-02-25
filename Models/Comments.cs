@@ -16,6 +16,6 @@ namespace backend.Models
         [ForeignKey("Stocks")]
         public int StockId { get; set; }
         
-        public Stocks Stock { get; set; }
+        public Stocks? Stock { get; set; }
     }
 }
