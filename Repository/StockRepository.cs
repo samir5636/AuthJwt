@@ -1,5 +1,6 @@
 ﻿using backend.Data;
 using backend.Dtos.Stock;
+using backend.Helpers;
 using backend.Interfaces;
 using backend.Models;
 using Microsoft.EntityFrameworkCore;
@@ -13,9 +14,21 @@ public class StockRepository : IStockRepository
     {
        _context = context; 
     }
-    public async Task<List<Stocks>> GetAllAsync()
+    public async Task<List<Stocks>> GetAllAsync(QueryObject query)
     {
-        return await _context.Stocks.Include(c => c.Comments).ToListAsync();
+        var stocks =  _context.Stocks.Include(c => c.Comments).AsQueryable();
+
+        if (!string.IsNullOrWhiteSpace(query.CompanyName))
+        {
+            stocks = stocks.Where(c => c.CompanyName.ToLower().Contains(query.CompanyName.ToLower()));
+        }
+
+        if (!string.IsNullOrWhiteSpace(query.Symbole))
+        {
+            stocks = stocks.Where(s => s.Symbole.ToLower().Contains(query.Symbole.ToLower()));
+        }
+        
+        return await stocks.ToListAsync();
         
     }
 
